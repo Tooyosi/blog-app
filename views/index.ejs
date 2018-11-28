@@ -1,0 +1,28 @@
+<% include partials/header %>
+<div class="ui four column doubling stackable grid container">
+    <% blogs.forEach((blog)=>{ %>
+        <div class="column">
+            <div class="ui huge header">
+                <a href="/blogs/<%= blog._id %>">
+                    <h2><%= blog.title  %></h2>
+                </a>
+            </div>
+            <div class="image">
+                <img class="ui centered medium image" src="<%= blog.image  %>" alt="">
+            </div>
+            <div class="meta">
+                <span><%= blog.created.toDateString()  %></span>
+            </div>
+            <div class="description column">
+                <p><%- blog.body.substring(0, 100)  %> ...</p>
+            </div>
+            <div class="extra">
+                <a class="ui floated tiny ash button" href="/blogs/<%= blog._id %>">
+                    Read More
+                    <i class="right chevron icon"></i>
+                </a>
+            </div>
+        </div>
+    <% }); %>
+</div>
+<% include partials/footer %>

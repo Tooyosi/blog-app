@@ -1,0 +1,20 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui small header">Login with your email and password</div>
+    <form class="ui form" action="/blogs" method="POST">
+        <div class="field">
+            <input class="control first" type="text" name="user[userName]" placeholder="Username Name">
+        </div>
+        <div class="field">
+            <input class="control second" type="password" name="user[password]" placeholder="Password">
+        </div>
+        <div class="field">
+            <input type="radio" name="user[rememberUser]"> Remember me
+        </div>
+        <div class="field">
+            <a class="ui blue basic button login" href="/login">Login</a>
+        </div>
+    </form>
+</div>
+<% include partials/footer %>

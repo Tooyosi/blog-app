@@ -1,0 +1,46 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Here? Register</div>
+    <form class="ui form" action="/blogs" method="POST">
+        <div class="field">
+            <label for="user[firstName]">First Name</label>
+            <input type="text" name="user[firstName]" placeholder="First Name">
+        </div>
+        <div class="field">
+            <label for="user[middleName]">Middle Name</label>
+            <input type="text" name="user[middleName]" placeholder="Middle Name">
+        </div>
+        <div class="field">
+            <label for="user[lastName]">last Name</label>
+            <input type="text" name="user[lastName]" placeholder="Last Name">
+        </div>
+        <div class="field">
+            <label for="user[dob]">Date of Birth</label>
+            <input type="date" name="user[dob]">
+        </div>
+        <div class="field">
+            <label for="user[gender]" >Gender</label>
+            <input type="radio" name="user[gender]" value="male" checked>Male<br>
+            <input type="radio" name="user[gender]" value="female"> Female<br>
+            <input type="radio" name="user[gender]" value="other"> Other
+        </div>
+        <div class="field">
+            <label for="user[email]">Email</label>
+            <input type="email" name="user[email]" placeholder="somebody@somethingmail.com">
+        </div>
+        <div class="field">
+            <label for="user[city]">City</label>
+            <select name="user[city]">
+                <option value="" selected >Select City</option>
+                <option value="Jos">Jos</option>
+            </select>
+        </div>
+        <div class="field">
+            <input class="ui violet big basic button" type="submit" value="Sign Up">
+            <span>OR</span>
+            <a class="ui violet big basic button" href="/login">Login</a>
+        </div>
+    </form>
+</div>
+<% include partials/footer %>
